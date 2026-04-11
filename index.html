@@ -261,6 +261,16 @@ img { max-width: 100%; height: auto; display: block; }
     font-style: italic;
     color: var(--color-white);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-mobile-tel {
+    display: inline; /* visible everywhere */
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1;
 }
 
 .nav-mobile-contact {
@@ -1030,19 +1040,13 @@ img { max-width: 100%; height: auto; display: block; }
     
     .nav-brand { font-size: 1.1rem; }
 
-    .nav-quick-mobile {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        margin-left: auto;
-        margin-right: 15px;
-    }
-
+    /* Téléphone collé au nom (mobile) */
     .nav-mobile-tel {
-        text-decoration: none;
-        font-size: 1.2rem;
+        display: inline;
+        font-size: 1rem;
     }
 
+    /* Bouton Contact rapide */
     .nav-mobile-contact {
         background: var(--color-white);
         color: var(--color-primary-dark);
@@ -1051,6 +1055,8 @@ img { max-width: 100%; height: auto; display: block; }
         border-radius: 12px;
         font-size: 0.85rem;
         text-decoration: none;
+        margin-left: auto;
+        margin-right: 15px;
     }
 
     /* Hero split → colonne unique sur mobile */
@@ -1157,13 +1163,13 @@ img { max-width: 100%; height: auto; display: block; }
 
     <!-- NAVIGATION avec menu hamburger mobile -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
-        <div class="nav-brand">Sophie Magnaudet</div>
-
-        <!-- Contact rapide mobile -->
-        <div class="nav-quick-mobile">
+        <div class="nav-brand">
+            Sophie Magnaudet
             <a href="tel:0612494177" class="nav-mobile-tel" aria-label="Appeler">📞</a>
-            <a href="#tarifs" class="nav-mobile-contact">Contact</a>
         </div>
+
+        <!-- Bouton Contact rapide mobile -->
+        <a href="#tarifs" class="nav-mobile-contact">Contact</a>
 
         <!-- Bouton hamburger (mobile uniquement) -->
         <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -1176,7 +1182,7 @@ img { max-width: 100%; height: auto; display: block; }
             <li><a href="#qui-suis-je">Qui suis-je ?</a></li>
             <li><a href="#blog">Le Blog</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="tel:0612494177" class="nav-tel">📞 06 12 49 41 77</a></li>
+            <li><a href="tel:0612494177" class="nav-tel">06 12 49 41 77</a></li>
             <li><a href="#tarifs" class="nav-btn">Tarifs & Contact</a></li>
         </ul>
     </nav>
