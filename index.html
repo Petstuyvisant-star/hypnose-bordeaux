@@ -1437,7 +1437,7 @@ img { max-width: 100%; height: auto; display: block; }
                 <p class="contact-form-subtitle">Vous pouvez m'envoyer un message directement ici, je vous répondrai dans les plus brefs délais.</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                    <!-- f989f9a8-ebd3-42e8-9dfc-42f42a46b8a8 -->
+                    <!-- Replace with your Access Key -->
                     <input type="hidden" name="access_key" value="f989f9a8-ebd3-42e8-9dfc-42f42a46b8a8">
                     
                     <!-- Subject (Optional) -->
@@ -1580,11 +1580,23 @@ img { max-width: 100%; height: auto; display: block; }
             const isOpen = menu.classList.toggle('is-open');
             btn.setAttribute('aria-expanded', isOpen);
         });
-        // Fermer le menu au clic sur un lien
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('is-open');
-                btn.setAttribute('aria-expanded', false);
+
+        // ✅ FIX ANCRES dans iFrame Wix :
+        // Intercepte tous les liens "#" et scrolle manuellement dans l'iFrame
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    // Fermer le menu hamburger si ouvert
+                    menu.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', false);
+                    // Scroll fluide vers la section cible
+                    const navHeight = 70;
+                    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
             });
         });
 
@@ -1592,6 +1604,7 @@ img { max-width: 100%; height: auto; display: block; }
         const blogModal = document.getElementById('blog-modal');
         const modalBody = document.getElementById('modal-article-body');
         const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalContentBox = document.querySelector('.modal-content-box');
 
         function openArticleModal(articleId) {
             const articleContent = document.getElementById(articleId);
@@ -1600,7 +1613,11 @@ img { max-width: 100%; height: auto; display: block; }
                 modalBody.innerHTML = articleContent.innerHTML;
                 blogModal.classList.remove('hidden');
                 blogModal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden'; // Empêche le scroll derrière
+                document.body.style.overflow = 'hidden';
+                // ✅ FIX : Repart toujours du haut de l'article
+                if (modalContentBox) {
+                    modalContentBox.scrollTop = 0;
+                }
             }
         }
 
