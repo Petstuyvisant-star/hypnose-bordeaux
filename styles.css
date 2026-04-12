@@ -1,6 +1,6 @@
-/* =========================================
-   Design System — Hypnose & EMDR Bordeaux
-   Sophie Magnaudet | Premium & Thérapeutique
+﻿/* =========================================
+   Design System â€” Hypnose & EMDR Bordeaux
+   Sophie Magnaudet | Premium & ThÃ©rapeutique
    ========================================= */
 :root {
     --color-primary: #9DAE97;
@@ -113,7 +113,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* =======================================
-   NAVIGATION — avec hamburger mobile
+   NAVIGATION â€” avec hamburger mobile
    ======================================= */
 .navbar {
     position: sticky;
@@ -459,7 +459,7 @@ img { max-width: 100%; height: auto; display: block; }
     gap: 1.5rem;
 }
 
-/* Plongeon dans l'Inconscient (Côté Psycho) */
+/* Plongeon dans l'Inconscient (CÃ´tÃ© Psycho) */
 #domaines {
     background-color: var(--color-text);
     color: var(--color-background);
@@ -728,7 +728,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* =======================================
-   ARTICLES INLINE — Compatible iFrame Wix
+   ARTICLES INLINE â€” Compatible iFrame Wix
    (remplace la modal non-fonctionnelle dans les iFrames)
    ======================================= */
 .inline-article {
@@ -862,14 +862,14 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* =======================================
-   ✅ MOBILE — Responsive complet
+   âœ… MOBILE â€” Responsive complet
    ======================================= */
 @media screen and (max-width: 900px) {
     .navbar { padding: 0 1rem; }
     
     .nav-brand { font-size: 1.1rem; }
 
-    /* Téléphone collé au nom (mobile) */
+    /* TÃ©lÃ©phone collÃ© au nom (mobile) */
     .nav-mobile-tel {
         display: inline;
         font-size: 1rem;
@@ -888,14 +888,14 @@ img { max-width: 100%; height: auto; display: block; }
         margin-right: 15px;
     }
 
-    /* Hero split → colonne unique sur mobile */
+    /* Hero split â†’ colonne unique sur mobile */
     .hero-content-split {
         flex-direction: column;
         text-align: center;
     }
     .hero-text .cta-container { justify-content: center; }
     .hero-photo { width: 220px; height: auto; margin: 0 auto; }
-    .hero-photo-wrapper { margin-top: 2rem; } /* Photo après le texte sur mobile */
+    .hero-photo-wrapper { margin-top: 2rem; } /* Photo aprÃ¨s le texte sur mobile */
 
     /* Navigation : passe en menu hamburger */
     .hamburger { display: flex; }
@@ -935,7 +935,7 @@ img { max-width: 100%; height: auto; display: block; }
         color: var(--color-white) !important;
     }
 
-    /* Grille → colonne unique */
+    /* Grille â†’ colonne unique */
     .grid-2 {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -955,7 +955,7 @@ img { max-width: 100%; height: auto; display: block; }
     }
     .diary-text { line-height: 2rem; }
 
-    /* Cards contact → On force un affichage côte à côte mais compact */
+    /* Cards contact â†’ On force un affichage cÃ´te Ã  cÃ´te mais compact */
     .contact-cards {
         gap: 1rem;
     }
@@ -978,9 +978,41 @@ img { max-width: 100%; height: auto; display: block; }
     .diary-card { padding: 1.5rem 1rem; }
     .tarif-box { padding: 1.5rem; }
     
-    /* On resserre encore plus les cartes contacts pour les tout petits écrans */
+    /* On resserre encore plus les cartes contacts pour les tout petits Ã©crans */
     .contact-cards { gap: 0.5rem; }
     .contact-action-card { padding: 1rem 0.5rem; }
     .contact-action-card span[aria-hidden] { font-size: 1.8rem !important; }
     .contact-hl { font-size: 0.75rem; word-break: break-word; }
 }
+
+/* =======================================
+   ANIMATIONS & HIGHLIGHTS (Latest Post)
+   ======================================= */
+.blog-card.is-new {
+    border: 2px solid var(--color-primary);
+    position: relative;
+    overflow: visible;
+    animation: softGlow 3s infinite alternate ease-in-out;
+}
+
+.new-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--color-primary-dark);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+@keyframes softGlow {
+    from { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    to { box-shadow: 0 5px 25px rgba(157, 174, 151, 0.3); }
+}
+
