@@ -39,6 +39,9 @@
     <meta name="twitter:description" content="Libérez-vous rapidement de vos blocages avec Sophie Magnaudet, hypnothérapeute certifiée à Bordeaux. Spécialiste Hypnose & EMDR pour un changement réel dès la première séance.">
     <meta name="twitter:image" content="https://www.hypnose-emdr-bordeaux.com/image/sophie-identite.jpg">
 
+    <!-- ✅ Calendly : Styles pour le module de réservation -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
     <!-- ✅ SEO : Données structurées JSON-LD — LocalBusiness + Person + FAQPage -->
     <script type="application/ld+json">
     {
@@ -458,6 +461,10 @@
                 <p class="tarif-price">80 €</p>
                 <p><strong>Séance d'accompagnement (1h)</strong></p>
                 <p class="tarif-note">Chaque séance est unique, personnalisée et centrée sur la découverte de vous-même.</p>
+                <div class="reservation-info" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem;">
+                    <p>🕒 <strong>Réservations en ligne :</strong> Créneaux disponibles jusqu'à 15h30.</p>
+                    <p style="opacity: 0.8; font-style: italic; margin-top: 0.5rem;">Pour un rendez-vous plus tardif ou une demande spécifique, merci de me contacter directement par téléphone.</p>
+                </div>
             </div>
 
             <div class="contact-cards">
@@ -529,7 +536,16 @@
         </div>
     </footer>
 
+    <!-- Widget de Réservation Flottant (Calendly) -->
+    <div id="floating-booking">
+        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/VOTRE_LIEN'});return false;" class="floating-btn">
+            <span class="btn-icon">📅</span>
+            <span class="btn-text">Prendre RDV</span>
+        </a>
+    </div>
+
     <!-- Scripts -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script>
         // === MENU HAMBURGER ===
         const btn = document.getElementById('hamburger-btn');
