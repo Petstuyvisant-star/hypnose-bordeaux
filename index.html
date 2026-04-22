@@ -202,8 +202,7 @@
             </div>
         </div>
 
-        <!-- Bouton Contact rapide mobile -->
-        <a href="#tarifs" class="nav-mobile-contact">Contact</a>
+
 
         <!-- Bouton hamburger (mobile uniquement) -->
         <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -446,9 +445,6 @@
                     <h3 class="faq-q">C'est quoi l'EMDR (ou EDMR) ? Quelle est la différence avec l'hypnose ?</h3>
                     <p>L'EMDR (parfois écrit EDMR par erreur) est une thérapie reconnue par l'OMS qui utilise des stimulations bilatérales pour désensibiliser les traumatismes. L'hypnose, elle, induit un état de relaxation profonde pour accéder à l'inconscient. Les deux méthodes sont complémentaires et je les combine souvent pour de meilleurs résultats.</p>
                 </div>
-                <div class="faq-item glass-card">
-                    <h3 class="faq-q">Combien coûte une séance d'hypnose ou d'EMDR à Bordeaux ?</h3>
-                    <p>Une séance d'accompagnement (hypnose ou EMDR) dure environ 1 heure et coûte <strong>80€</strong> dans mon cabinet au 128 cours de la Somme, 33800 Bordeaux.</p>
                 </div>
             </div>
         </div>
@@ -467,64 +463,87 @@
 
             </div>
 
-            <div class="contact-cards" id="rdv">
-                <a href="tel:0612494177" class="contact-action-card glass-card" id="contact-tel">
-                    <span aria-hidden="true" style="font-size: 2.5rem;">📞</span>
-                    <h3>M'appeler</h3>
-                    <span class="contact-hl">06 12 49 41 77</span>
-                </a>
-                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hypnose-bordeaux-magnaudet'});return false;" class="contact-action-card glass-card" id="contact-booking">
-                    <span aria-hidden="true" style="font-size: 2.5rem;">📅</span>
-                    <h3>Prendre RDV</h3>
-                    <span class="contact-hl">En ligne (Calendly)</span>
-                    <p style="font-size: 0.95rem; margin-top: 1.2rem; color: var(--color-primary-dark); font-weight: 600; font-style: italic; line-height: 1.4;">
-                        (Pour un créneau spécifique ou après 17h00 : contact par téléphone uniquement)
-                    </p>
-                </a>
-                <a href="mailto:hypnose.bordeaux.magnaudet@gmail.com" class="contact-action-card glass-card" id="contact-email">
-                    <span aria-hidden="true" style="font-size: 2.5rem;">✉️</span>
-                    <h3>M'écrire</h3>
-                    <span class="contact-hl">hypnose.bordeaux.<br>magnaudet@gmail.com</span>
-                </a>
-            </div>
-
-            <!-- Formulaire de contact (Web3Forms) -->
-            <div class="contact-form-container glass-card" id="contact-form-section">
-                <h3>Contactez-moi par message</h3>
-                <p class="contact-form-subtitle">Vous pouvez m'envoyer un message directement ici, je vous répondrai dans les plus brefs délais.</p>
+            <div class="contact-section-split" id="rdv" style="text-align: left;">
                 
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                    <!-- Replace with your Access Key -->
-                    <input type="hidden" name="access_key" value="f989f9a8-ebd3-42e8-9dfc-42f42a46b8a8">
-                    
-                    <!-- Subject (Optional) -->
-                    <input type="hidden" name="subject" value="Nouveau message depuis le site Hypnose Bordeaux">
-                    
-                    <div class="form-group">
-                        <label for="name">Nom / Prénom *</label>
-                        <input type="text" id="name" name="name" required class="form-input">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required class="form-input">
-                    </div>
+                <!-- Left panel: Contact Info -->
+                <div class="contact-info-panel glass-card">
+                    <h3 style="color: var(--color-white); font-size: 1.8rem; margin-bottom: 0.5rem; text-align: center;">Contact Direct</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); text-align: center; margin-bottom: 2rem;">Sélectionnez l'option qui vous convient.</p>
 
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" class="form-input">
+                    <div class="contact-method-list">
+                        
+                        <!-- Calendly -->
+                        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hypnose-bordeaux-magnaudet'});return false;" class="contact-method-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Prendre RDV en ligne</h4>
+                                <span class="contact-hl">Accéder à l'agenda (Calendly)</span>
+                                <p class="contact-note">(Pour un créneau spécifique ou après 17h00 : contact par téléphone uniquement)</p>
+                            </div>
+                        </a>
+
+                        <!-- Telephone -->
+                        <a href="tel:0612494177" class="contact-method-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>M'appeler</h4>
+                                <span class="contact-hl">06 12 49 41 77</span>
+                            </div>
+                        </a>
+
                     </div>
+                </div>
+
+                <!-- Right panel: Contact Form -->
+                <div class="contact-form-container glass-card" id="contact-form-section">
+                    <h3>Contactez-moi par message</h3>
+                    <p class="contact-form-subtitle">Vous pouvez m'envoyer un message directement ici, je vous répondrai dans les plus brefs délais.</p>
                     
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
-                    </div>
-                    
-                    <!-- Honeypot Spam Protection -->
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                    
-                    <button type="submit" class="btn btn-primary submit-btn">Envoyer mon message</button>
-                </form>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="f989f9a8-ebd3-42e8-9dfc-42f42a46b8a8">
+                        
+                        <!-- Subject (Optional) -->
+                        <input type="hidden" name="subject" value="Nouveau message depuis le site Hypnose Bordeaux">
+                        
+                        <div class="form-group">
+                            <label for="name">Nom / Prénom *</label>
+                            <input type="text" id="name" name="name" required class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required class="form-input"></textarea>
+                        </div>
+                        
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">Envoyer mon message</button>
+                    </form>
+                </div>
+
             </div>
 
             <address class="footer-address">
