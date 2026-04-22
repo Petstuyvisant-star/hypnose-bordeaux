@@ -1081,10 +1081,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 @media screen and (max-width: 400px) {
     .nav-brand {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .nav-rdv-btn {
-        display: none; /* Cache le bouton sur les très petits écrans pour éviter le chevauchement */
+        padding: 0.2rem 0.5rem;
+        font-size: 0.65rem;
+        letter-spacing: -0.5px;
     }
 }
 
