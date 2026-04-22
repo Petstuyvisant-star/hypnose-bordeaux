@@ -198,7 +198,7 @@
             Sophie Magnaudet
             <div class="nav-contact-group">
                 <a href="tel:0612494177" class="nav-mobile-tel" aria-label="Appeler">📞</a>
-                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hypnose-bordeaux-magnaudet'});return false;" class="nav-rdv-btn">Prendre RDV</a>
+                <a href="#rdv" class="nav-rdv-btn">Prendre RDV</a>
             </div>
         </div>
 
@@ -466,22 +466,25 @@
                 <p class="tarif-note">Chaque séance est unique, personnalisée et centrée sur la découverte de vous-même.</p>
                 <div class="reservation-info glass-card" style="margin-top: 1.5rem; padding: 1.5rem; border: 1px solid var(--color-primary); background: rgba(157, 174, 151, 0.1);">
                     <p style="font-size: 1.1rem; color: var(--color-primary); margin-bottom: 0.5rem;">📅 <strong>Prise de rendez-vous</strong></p>
-                    <p>Les créneaux en ligne sont ouverts à <strong>9h30, 11h, 12h30, 14h et 15h30</strong>.</p>
-                    <p style="margin-top: 0.8rem; font-weight: 600; color: var(--color-background);">📌 Un autre horaire ? Un besoin spécifique ?</p>
-                    <p style="font-style: italic; opacity: 0.9;">Merci de me contacter directement par téléphone au <strong>06 12 49 41 77</strong> pour convenir d'un rendez-vous (horaires tardifs ou demandes particulières).</p>
+                    <p>Pour un créneau spécifique ou un rendez-vous après 15h30, merci de me contacter par téléphone.</p>
                 </div>
             </div>
 
-            <div class="contact-cards">
+            <div class="contact-cards" id="rdv">
                 <a href="tel:0612494177" class="contact-action-card glass-card" id="contact-tel">
                     <span aria-hidden="true" style="font-size: 2.5rem;">📞</span>
                     <h3>M'appeler</h3>
                     <span class="contact-hl">06 12 49 41 77</span>
                 </a>
+                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hypnose-bordeaux-magnaudet'});return false;" class="contact-action-card glass-card" id="contact-booking">
+                    <span aria-hidden="true" style="font-size: 2.5rem;">📅</span>
+                    <h3>Prendre RDV</h3>
+                    <span class="contact-hl">En ligne (Calendly)</span>
+                </a>
                 <a href="mailto:hypnose.bordeaux.magnaudet@gmail.com" class="contact-action-card glass-card" id="contact-email">
                     <span aria-hidden="true" style="font-size: 2.5rem;">✉️</span>
                     <h3>M'écrire</h3>
-                    <span class="contact-hl">hypnose.bordeaux.magnaudet<br>@gmail.com</span>
+                    <span class="contact-hl">hypnose.bordeaux.magnaudet@gmail.com</span>
                 </a>
             </div>
 
